@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <div id="wrapper">
+        <table id="formTable">
+            <tr>
+                <td>
+                    <span>FIRST NAME </span>
+                </td>
+                <td>
+                    <input id="fName" class="getSizeFromInput" type="text" name="firstname" >
+                    <div id="errfname"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="name">LAST NAME</span> 
+                </td>
+                <td>
+                    <input id="lName" class="setSize" type="text" name="lastname" >
+                    <div id="errlname"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="name">BIRTH DATE</span> 
+                </td>
+                <td>
+                    <input id="compareDate" class="setSize" type="date" name="date">
+                    <div id="errDate"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>GENDER</span>        
+                </td>
+                <td>
+                    <input class="check" id="male" type="radio" name="gender" value="male"><span>Male</span><br>
+                    <input class="check" id="female" type="radio" name="gender" value="female"><span>Female</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SHOW GENDER</span>
+                </td>
+                <td>
+                    <select>
+                        <option value="Both" selected>Both</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select><br>
+                    <input type="checkbox" name="age" value="1"> <span style="font-size: .8em; margin-top: 5px; display: inline-block;">SHOW AGE</span> 
+                </td>
+                <td id="btn"><button  type="submit" name="send">submit</button></td>
+                
+            </tr>
+             
+        </table>
+        
+    </div>
+    <div class="table"></div>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="formular.js"></script>
+   
+</body>
+</html>

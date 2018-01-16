@@ -1,0 +1,13 @@
+
+
+
+#formTable{margin:auto; background-color: #008080; color: #8FBC8F; font-weight: bold; padding-top: 30px; padding-bottom: 30px; }
+td {padding-left: 20px; padding-right: 30px; color: #8FBC8F;}
+#btnOk{width: 120px;margin: auto;} 
+#errfname, #errlname, #errDate {
+    color: #F74949;
+    font-size: .8em;
+    letter-spacing: .5px;
+    padding: 2px 0;
+}
+
