@@ -1,13 +1,16 @@
 
 
 
-#formTable{margin:auto; background-color: #008080; color: #8FBC8F; font-weight: bold; padding-top: 30px; padding-bottom: 30px; }
+#formTable{margin:auto; background-color: #008080; color: #8FBC8F; font-weight: bold;
+ padding-top: 30px; padding-bottom: 30px; }
 td {padding-left: 20px; padding-right: 30px; color: #8FBC8F;}
-#btnOk{width: 120px;margin: auto;} 
+#btnSend{width: 120px;margin: auto; color: grey;} 
 #errfname, #errlname, #errDate {
     color: #F74949;
     font-size: .8em;
     letter-spacing: .5px;
     padding: 2px 0;
 }
+.table {margin:auto; background-color: #008080; color: #8FBC8F; font-weight: bold; 
+    padding-top: 30px; padding-bottom: 30px; }
 

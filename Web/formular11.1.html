@@ -6,39 +6,47 @@
 
 </head>
 <body>
-    
-    <div id="wrapper">
-        <table id="formTable">
+    <div id="formTable">
+        <table id="table">
             <tr>
-                <td>
-                    <span>FIRST NAME </span>
+                <td class="first">
+                    <span class="name">FIRST NAME</span>
                 </td>
                 <td>
-                    <input id="fName" class="getSizeFromInput" type="text" name="firstname" >
-                    <div id="errfname"></div>
+                    <input id="fName"  type="text" name="firstname" >
                 </td>
             </tr>
             <tr>
-                <td>
+                <td></td>
+                <td><div id="errfname"></div></td>
+            </tr>
+            <tr>
+                <td class="first">
                     <span class="name">LAST NAME</span> 
                 </td>
                 <td>
-                    <input id="lName" class="setSize" type="text" name="lastname" >
-                    <div id="errlname"></div>
+                    <input id="lName"  type="text" name="lastname" >
                 </td>
             </tr>
             <tr>
-                <td>
-                    <span class="name">BIRTH DATE</span> 
-                </td>
-                <td>
-                    <input id="compareDate" class="setSize" type="date" name="date">
-                    <div id="errDate"></div>
-                </td>
+                <td></td>
+                <td><div id="errlname"></div></td>
             </tr>
             <tr>
                 <td>
-                    <span>GENDER</span>        
+                    <span class="name">DATE</span> 
+                </td>
+                <td>
+                    <input id="compareDate" type="date" name="date">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><div id="errDate"></div></td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="name">GENDER</span>        
                 </td>
                 <td>
                     <input class="check" id="male" type="radio" name="gender" value="male"><span>Male</span><br>
@@ -46,24 +54,28 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <span>SHOW GENDER</span>
+                <td class="first">
+                    <span class="name">SHOW GENDER</span>
                 </td>
                 <td>
-                    <select>
-                        <option value="Both" selected>Both</option>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                    </select><br>
-                    <input type="checkbox" name="age" value="1"> <span style="font-size: .8em; margin-top: 5px; display: inline-block;">SHOW AGE</span> 
+                    <select id="selectGender">
+                        <option name = "selectGender" class="genderValue" value="a">Both</option>
+                        <option name = "selectGender" class="genderValue" value="f">Female</option>
+                        <option name = "selectGender" class="genderValue" value="m">Male</option>
+                    </select>
                 </td>
-                <td id="btn"><button  type="submit" name="send">submit</button></td>
-                
+            </tr>   
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name="age" id="showAge"> <span style="font-size: .8em; margin-top: 5px; display: inline-block;">SHOW AGE</span> </td>
             </tr>
-             
         </table>
         
+            <span id="btnSend"><button class="send" type="submit" name="odoslat">submit</button></span>
+            
+         
     </div>
+
     <div class="table"></div>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
