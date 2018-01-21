@@ -75,17 +75,27 @@
             });
         
         })();
-    
-        if (error == false){
+
+         if (error == false){ 
             data();
+            deleteTab();
         }
-    });
+        });
 
     function data(){
+    var today = new Date();
+    var birthDate = new Date($('#compareDate').val());
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())){
+        age--;
+     }
+    
         var person = new Object();
         person.fname = $("#fName").val();
         person.lname = $("#lName").val();
         person.date = $("#compareDate").val();
+        person.age = age;
         person.gender = $("input[name='gender']:checked").val();
         persons.push(person);
         printTable();
@@ -97,14 +107,21 @@
         var selectedGender = getSelectedGender();
         var checkedAge = isCheckedAge();
         var arr = new Array();
+        var arrGetAge = new Array();
 
         persons.forEach(function(obj){
-            if(selectedGender == 'm' && obj.gender == 'male')
+            if(selectedGender == 'm' && obj.gender == 'male'){ 
                 arr.push(obj);
-            else if(selectedGender == "f" && obj.gender == "female")
+                arrGetAge.push(obj);
+             }
+            else if(selectedGender == "f" && obj.gender == "female"){ 
                 arr.push(obj);
-            else if(selectedGender == "a")
+                arrgetAge.push(obj);
+                }
+            else if(selectedGender == "a"){ 
                 arr.push(obj);
+                arrGetAge.push(obj);
+                }
         });
 
         if(arr.length>0){
@@ -131,6 +148,7 @@
             table.append(line);
             divTable.append(table);
         }
+         if($("#showAge").is(":checked") == false){ 
 
         arr.forEach(function(obj){
           var line=$("<tr/>");
@@ -150,8 +168,29 @@
             divTable.append(table);
         });
     }
-    
-
+    else {
+              arrGetAge.forEach(function(obj){
+              var line=$("<tr/>");
+              var col1=$("<td/>");
+              $(col1).append(obj.fname);
+              var col2=$("<td/>");
+              $(col2).append(obj.lname);
+              var col3=$("<td/>");
+              $(col3).append(obj.age);
+              var col4=$("<td/>");
+              $(col4).append(obj.gender);
+              var col5=$("<td/>");
+              $(col5).append(obj.delete);
+                line.append(col1);
+                line.append(col2);
+                line.append(col3);
+                line.append(col4);
+                line.append(col5);
+                table.append(line);
+                divTable.append(table);
+            });
+     }
+     }
     function getSelectedGender(){
          var selectedGender = $("option[name='selectGender']:checked").val();
          return selectedGender;
@@ -166,25 +205,11 @@
     }   
 
     $("#showAge").change(function(){
+        
         printTable();
     });
-
-    var date1 = $("#compareDate").val();
-    console.log(date1);
-
-    function deleteForm(){
-        $("#fName").val('');
-        $("#lName").val('');
-        $("#comapareDate").val('');
-
+     function deleteTab(){
+        $("#lName, #fName, #compareDate").val("");
     }
-
-
-
     
-   
-
-    
-
-
 })(jQuery);
