@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="weather.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="weather.js"></script>
 </head>
 <body>
-	     <div class="container"></div>
+	     <div class="container">
 		<center><h1>Weather</h1><center>
 		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
         <form>
 		<table id="table">
-			<tr>
-				<td class="td"><input type="text" id="city" placeholder="City"></td>
-				<td class="td"><input type="text" id="code" placeholder="Country code"></td>
+			<tr class="form-group">
+				<td class="td"><input type="text" class="form-control" id="city" placeholder="City"></td>
+				<td class="td"><input type="text" class="form-control" id="code" placeholder="Country code"></td>
 			</tr>
 			<tr>
 			<td class="td"><input type="checkbox" value="details" id="details">Details</td>
@@ -26,14 +27,17 @@
 			<td class="td"><input type="button" id="btnOk" value="OK" class="btn btn-success"></td>
 			</tr>
 		</table>
-		<div class="mainTable"></div>
-		</div>
-
-	</div>
-	</div>
-	<div class="col-sm-3"></div>
-	</form>
-
+		</div> <!-- ROW -->
+	</div><!-- col -->
+	<div class="mainTable"></div>
+	<div class="col-md-2"></div><!-- first table -->
+	
+	<!-- second table -->
+	
+    
+   
+     </div> <!-- container -->
+     </form>
 	
 
 </body>
